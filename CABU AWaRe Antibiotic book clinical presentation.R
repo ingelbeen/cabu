@@ -11,7 +11,7 @@ pacman::p_load(here,readxl,lubridate,haven,dplyr,ggplot2,tidyr, ggpattern)
 
 #### NANORO, BURKINA FASO ####
 #### clean raw database - see that only the anonimysed dataframe is available here, after cleaning raw data ####
-dbnanoro <- read_excel("C:/Users/bingelbeen/OneDrive - ITG/Medicines use/community antibiotic use/Burkina/db/Visit_exit_Ongoing.xls")
+dbnanoro <- read_excel("db/Visit_exit_Ongoing.xls")
 
 # age 
 dbnanoro$ageyears <- dbnanoro$Age_annés
@@ -620,7 +620,7 @@ write.table(patientnanoro, file = 'patientnanoro.txt')
 write.table(patientnanoroshort, file = 'patientnanoroshort.txt')
 
 #### import cleaned patient database ####
-patientnanoro <- read.csv("C:/Users/bingelbeen/OneDrive - ITG/Medicines use/community antibiotic use/DRC/CABU data analysis/patientnanoroshort.txt", sep="")
+patientnanoro <- read.csv("patientnanoroshort.txt", sep="")
 
 # variable for antibiotic use
 patientnanoro$antibioticuse <- "no"
